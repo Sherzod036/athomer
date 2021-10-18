@@ -41,7 +41,11 @@ const html = () => {
 }
 
 const bundle_css = () => {
-	return src(['node_modules/bootstrap/dist/css/bootstrap-grid.css'])
+	return src([
+		'node_modules/bootstrap/dist/css/bootstrap-grid.css',
+		'node_modules/aos/dist/aos.css',
+		'node_modules/hamburgers/dist/hamburgers.css'
+	])
 		.pipe(concat('bundle.css'))
 		.pipe(csso())
 		.pipe(dest(`${build}/css`))
@@ -49,7 +53,7 @@ const bundle_css = () => {
 }
 
 const bundle_js = () => {
-	return src(['node_modules/gsap/dist/gsap.js'])
+	return src(['node_modules/aos/dist/aos.js'])
 		.pipe(concat('bundle.js'))
 		.pipe(uglify())
 		.pipe(dest(`${build}/js`))
