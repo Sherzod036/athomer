@@ -73,6 +73,12 @@
 		}
 		&-block {
 			width: 33.3%;
+			& .page-blank__composition-list {
+				border-right: 1px solid #fff;
+			}
+			&:last-child .page-blank__composition-list {
+				border-right: 0;
+			}
 		}
 		&-inner {
 			padding-top: 40px;
@@ -164,4 +170,8 @@
 		font-size: 25px;
 		color: #005392;
 	}
+}
+
+#blank_1 .contacts {
+	border-top: 10px solid #ef7f1a;
 }

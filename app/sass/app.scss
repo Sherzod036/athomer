@@ -40,6 +40,9 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 20px;
+	max-width: 1920px;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 .body-bg {
@@ -193,6 +196,17 @@ li {
 	visibility: visible;
 }
 
+.langs_dropdown .list__dropdown {
+	left: -10px;
+	padding: 15px 10px;
+}
+
+.langs_dropdown:hover .list__dropdown {
+	top: 60px;
+	opacity: 1;
+	visibility: visible;
+}
+
 .instructions_dropdown:hover .list__dropdown {
 	top: 60px;
 	opacity: 1;
@@ -200,8 +214,10 @@ li {
 }
 
 .hero {
+	position: relative;
 	width: 100%;
 	height: 100vh;
+	padding-top: 86px;
 	background: linear-gradient(
 		359.23deg,
 		#3966ae 15.75%,
@@ -211,6 +227,39 @@ li {
 		#00a0e3 111.7%
 	);
 	border-bottom: 16px solid $secondary;
+	&__products-image {
+		top: 210px;
+		display: block;
+		position: absolute;
+	}
+	&__waves {
+		display: block;
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		bottom: 150px;
+	}
+	&__wave {
+		display: block;
+		position: absolute;
+		top: 40px;
+		right: 0;
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		bottom: 70px;
+		&-text {
+			max-width: 755px;
+			width: 100%;
+			font-weight: 500;
+			font-size: 30px;
+			line-height: 37px;
+			color: #fff;
+			margin-right: 100px;
+		}
+	}
 }
 
 .spray {

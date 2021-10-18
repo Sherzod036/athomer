@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const popup = document.querySelector('.popup')
 	const popup_close = document.querySelector('.popup__close')
-	const video = document.querySelector('.video-icon')
+	const videoBtn = document.querySelector('.video-icon')
 
-	video.addEventListener('click', () => {
+	videoBtn.addEventListener('click', () => {
 		popup.classList.add('active')
 		document.body.style = 'overflow: hidden'
 	})
